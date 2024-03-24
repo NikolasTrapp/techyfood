@@ -22,6 +22,12 @@
     <file url="file://$PROJECT_DIR$/../restaurant/restaurant-replicated/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../restaurant/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../restaurant/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/security-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/security-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/security-external/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/security-external/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/security-replicated/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/security-replicated/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../security/security/security-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../security/security/security-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../security/security/security-external/src/main/java" charset="UTF-8" />
@@ -30,5 +36,7 @@
     <file url="file://$PROJECT_DIR$/../security/security/security-replicated/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../security/security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../security/security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../security/src/main/resources" charset="UTF-8" />
   </component>
 </project>

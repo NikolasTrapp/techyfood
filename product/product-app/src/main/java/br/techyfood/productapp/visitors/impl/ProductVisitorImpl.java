@@ -3,10 +3,10 @@ package br.techyfood.productapp.visitors.impl;
 import br.techyfood.productapp.visitors.ProductVisitor;
 import br.techyfood.rabbitmq.RabbitMessaging;
 import br.techyfood.productapp.enities.ProductEntity;
-import br.techyfood.productapp.visitors.DefaultVisitor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import static br.techyfood.common.visitor.VisitorUtils.buildReplicationMessage;
 import static br.techyfood.rabbitmq.RabbitConstants.EXCHANGE;
 import static br.techyfood.rabbitmq.model.Operation.CREATE;
 import static br.techyfood.rabbitmq.model.Operation.DELETE;
@@ -14,7 +14,7 @@ import static br.techyfood.productexternal.ProductExternalConstants.PRODUCT_ENTI
 
 @Component
 @RequiredArgsConstructor
-public class ProductVisitorImpl extends DefaultVisitor implements ProductVisitor {
+public class ProductVisitorImpl implements ProductVisitor {
 
     private final RabbitMessaging messaging;
 

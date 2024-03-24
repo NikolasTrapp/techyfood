@@ -1,5 +1,6 @@
 package br.techyfood.restaurantapp.enities;
 
+import br.techyfood.restaurantreplicated.entities.UserEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -21,25 +22,29 @@ import java.util.UUID;
 public class RestaurantEntity {
 
     @Id
-    @NotNull
+    @NotNull(message = "id cannot be null.")
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @NotBlank
+    @NotBlank(message = "name cannot be empty.")
     @Size(max = 90)
     @Column(name = "name")
     private String name;
 
-    @NotBlank
+    @NotBlank(message = "cnpj cannot be empty.")
     @Size(max = 14)
     @Column(name = "cnpj")
     private String cnpj;
 
-    @NotNull
+    @NotNull(message = "active cannot be null.")
     @Builder.Default
     @Column(name = "active")
     private Boolean active = true;
 
-    //TODO COLUNA PROPRIETARY, DEVERÁ SER REPLICADA DO SERVIÇO DE USUÁRIOS.
+    @NotNull(message = "user cannot be null.")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
+
 }

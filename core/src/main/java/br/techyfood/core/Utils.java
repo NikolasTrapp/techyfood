@@ -22,8 +22,8 @@ public class Utils {
         .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
     public static String format(String format, Object... args) {
-        if (isNull(format) || isNull(args) || notEmpty(format)) {
-            throw new IllegalArgumentException("Arguments cannot be null");
+        if (isEmpty(format) || isNull(args)) {
+            throw new IllegalArgumentException("Arguments and format cannot be null");
         }
 
         return MessageFormatter.arrayFormat(format, args).getMessage();

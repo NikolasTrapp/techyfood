@@ -1,5 +1,6 @@
 package br.techyfood.restaurantapp.enities;
 
+import br.techyfood.restaurantreplicated.entities.UserEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,7 +9,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -22,33 +22,36 @@ import java.util.UUID;
 public class ReviewEntity {
 
     @Id
-    @NotNull
+    @NotNull(message = "id cannot be null.")
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @NotBlank
+    @NotBlank(message = "description cannot be empty.")
     @Size(max = 255)
     @Column(name = "description", nullable = false)
     private String description;
 
-    @NotNull
+    @NotNull(message = "stars cannot be null.")
     @Column(name = "stars", nullable = false, updatable = false)
     private Integer stars;
 
-    @NotNull
+    @NotNull(message = "active cannot be null.")
     @Column(name = "active", nullable = false)
     private Boolean active = true;
 
-    @NotNull
+    @NotNull(message = "restaurant cannot be null.")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant", nullable = false, updatable = false)
     private RestaurantEntity restaurant;
 
-    @NotNull
+    @NotNull(message = "created_at cannot be null.")
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    //TODO COLUNA USER, DEVERÁ SER REPLICADA DO SERVIÇO DE USUÁRIOS.
+    @NotNull(message = "user cannot be null.")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 
 }
