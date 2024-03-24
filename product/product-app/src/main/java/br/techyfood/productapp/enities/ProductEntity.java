@@ -23,8 +23,8 @@ import java.util.UUID;
 public class ProductEntity {
 
     @Id
-    @NotNull
     @Column(name = "id")
+    @NotNull(message = "id cannot be null")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 

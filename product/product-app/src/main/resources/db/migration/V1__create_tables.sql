@@ -33,22 +33,14 @@ CREATE TABLE IF NOT EXISTS product
 );
 
 
-ALTER TABLE IF EXISTS category
-    ADD CONSTRAINT pk_category_id PRIMARY KEY (id);
-ALTER TABLE IF EXISTS category
-    ADD CONSTRAINT un_category_name UNIQUE (name);
+ALTER TABLE IF EXISTS category ADD CONSTRAINT pk_category_id PRIMARY KEY (id);
+ALTER TABLE IF EXISTS category ADD CONSTRAINT un_category_name UNIQUE (name);
 
-ALTER TABLE IF EXISTS price
-    ADD CONSTRAINT pk_price_id PRIMARY KEY (id);
+ALTER TABLE IF EXISTS price ADD CONSTRAINT pk_price_id PRIMARY KEY (id);
 
-ALTER TABLE IF EXISTS restaurant
-    ADD CONSTRAINT pk_restaurant_id PRIMARY KEY (id);
+ALTER TABLE IF EXISTS restaurant ADD CONSTRAINT pk_restaurant_id PRIMARY KEY (id);
 
-ALTER TABLE IF EXISTS product
-    ADD CONSTRAINT pk_product_id PRIMARY KEY (id);
-ALTER TABLE IF EXISTS product
-    ADD CONSTRAINT fk_price FOREIGN KEY (price) REFERENCES price (id);
-ALTER TABLE IF EXISTS product
-    ADD CONSTRAINT fk_category FOREIGN KEY (category) REFERENCES category (id);
-ALTER TABLE IF EXISTS product
-    ADD CONSTRAINT fk_restaurant FOREIGN KEY (restaurant) REFERENCES restaurant (id);
+ALTER TABLE IF EXISTS product ADD CONSTRAINT pk_product_id PRIMARY KEY (id);
+ALTER TABLE IF EXISTS product ADD CONSTRAINT fk_price FOREIGN KEY (price) REFERENCES price (id);
+ALTER TABLE IF EXISTS product ADD CONSTRAINT fk_category FOREIGN KEY (category) REFERENCES category (id);
+ALTER TABLE IF EXISTS product ADD CONSTRAINT fk_restaurant FOREIGN KEY (restaurant) REFERENCES restaurant (id);

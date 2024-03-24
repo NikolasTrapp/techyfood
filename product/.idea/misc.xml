@@ -16,7 +16,19 @@
         <option value="$PROJECT_DIR$/../restaurant/restaurant-external/pom.xml" />
         <option value="$PROJECT_DIR$/../restaurant/restaurant-replicated/pom.xml" />
         <option value="$PROJECT_DIR$/../core/pom.xml" />
+        <option value="$PROJECT_DIR$/../security/pom.xml" />
+        <option value="$PROJECT_DIR$/../security/security/pom.xml" />
+        <option value="$PROJECT_DIR$/../security-app/pom.xml" />
+        <option value="$PROJECT_DIR$/../security/security/security-external/pom.xml" />
+        <option value="$PROJECT_DIR$/../security/security/security-replicated/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../projeto/provider/app/pom.xml" />
+        <option value="$PROJECT_DIR$/../../projeto/provider/pom.xml" />
+        <option value="$PROJECT_DIR$/../../projeto/provider/provider-external/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />

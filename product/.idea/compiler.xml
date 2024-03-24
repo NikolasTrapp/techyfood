@@ -8,22 +8,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="product-external" />
-        <module name="app" />
-        <module name="provider-external" />
         <module name="restaurant-external" />
         <module name="core" />
         <module name="product-app" />
         <module name="product-replicated" />
+        <module name="security-external" />
+        <module name="security-replicated" />
         <module name="restaurant-replicated" />
         <module name="gateway" />
+        <module name="security-app" />
         <module name="restaurant-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="app" target="17" />
       <module name="product (1)" target="17" />
       <module name="product-app (1)" target="17" />
       <module name="product-external (1)" target="17" />
       <module name="product-replicated (1)" target="17" />
+      <module name="provider" target="1.5" />
+      <module name="provider-external" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -35,6 +39,9 @@
       <module name="product-external" options="" />
       <module name="product-replicated" options="" />
       <module name="provider-external" options="-parameters" />
+      <module name="security-app" options="" />
+      <module name="security-external" options="" />
+      <module name="security-replicated" options="" />
     </option>
   </component>
 </project>

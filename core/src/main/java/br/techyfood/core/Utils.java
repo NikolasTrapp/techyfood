@@ -9,6 +9,7 @@ import org.slf4j.helpers.MessageFormatter;
 
 import java.util.Collection;
 import java.util.Objects;
+import java.util.UUID;
 
 import static java.util.Objects.isNull;
 
@@ -78,6 +79,18 @@ public class Utils {
         }
 
         return mapper.convertValue(from, to);
+    }
+
+    public static UUID uuid() {
+        return UUID.randomUUID();
+    }
+
+    public static UUID uuid(String uuid) {
+        return UUID.fromString(uuid);
+    }
+
+    public static String uuidStr() {
+        return UUID.randomUUID().toString();
     }
 
 }
