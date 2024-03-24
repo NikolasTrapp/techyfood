@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="product-external" />
+        <module name="restaurant-external" />
+        <module name="product-app" />
+        <module name="product-replicated" />
+        <module name="restaurant-replicated" />
+        <module name="gateway" />
+        <module name="restaurant-app" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="app" target="17" />
+      <module name="core" target="17" />
+      <module name="provider" target="1.5" />
+      <module name="provider-external" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="app" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="product-app" options="" />
+      <module name="product-external" options="" />
+      <module name="product-replicated" options="" />
+      <module name="provider-external" options="-parameters" />
+    </option>
+  </component>
+</project>
